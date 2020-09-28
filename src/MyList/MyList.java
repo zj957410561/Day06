@@ -1,5 +1,7 @@
 package MyList;
 
+import java.util.ArrayList;
+
 public class MyList {
     private int size;
     private Object[] elementData;
@@ -103,12 +105,24 @@ public class MyList {
      * @param o
      * @return
      */
-    public boolean add(Object o, int index) {
-        while (index > size - 1) {
-            reSize();
-        }
+    public boolean add(Object o) {
+        reSize();
         elementData[size - 1] = o;
         return true;
+    }
+
+    /**
+     * 更改数组
+     *
+     * @param o
+     * @param index 下标
+     * @return
+     */
+    public Object update(Object o, int index) {
+        isOutIndex(index);
+        Object temp = elementData[index];
+        elementData[index] = o;
+        return temp;
     }
 
     /**
@@ -156,5 +170,10 @@ public class MyList {
                 e.printStackTrace();
             }
         }
+    }
+
+    public static void main(String[] args) {
+        ArrayList arrayList = new ArrayList();
+        arrayList.add(2);
     }
 }
