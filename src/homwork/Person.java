@@ -3,17 +3,17 @@ package homwork;
 import java.util.Date;
 
 public class Person {
-    int num;
-    String name;
-    String gender;
-    int age;
-    double height;
-    double weight;
-    Date birthday;
-    String birthplaces;
+    private int num;
+    private String name;
+    private String gender;
+    private int age;
+    private double height;
+    private double weight;
+    private Date birthday;
+    private String birthplaces;
 
     public Person() {
-        super();
+        super();// Object 类创建对象时默认都是通过无参构造来创建对象的
     }
 
     public Person(int num, String name, String gender, int age, double height, double weight, Date birthday, String birthplaces) {

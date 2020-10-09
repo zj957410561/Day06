@@ -19,6 +19,7 @@ public class Juicer {
     }
     public void Juice(Apple apple)
     {
+        // Thread.sleep(2000); // 让程序休眠2S
         System.out.println("榨苹果");
     }
 }
